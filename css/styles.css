@@ -1,0 +1,300 @@
+:root {
+  --primary-color: #ffeed4;
+  --secondary-color: rgb(223, 72, 22) ;
+  --crimson:rgb(197, 52, 52);
+  --a_color: rgb(177, 66, 103);
+  --a_active: rgb(252, 92, 0);
+  --button_bckg-color: rgb(197, 52, 52);
+  --border-bottom-color: rgba(0, 0, 0, 0.3);
+  --color-change-from: rgb(40.39917%,77.598572%,70.999146%);
+  --color-change-to: rgb(97.999573%,66.299438%,25.099182%);
+  --bold_font-weight: 700;
+  --h1_font_size: xx-large;
+}
+
+body {background-color: var(--primary-color);
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: 400;
+  font-size:large; 
+  line-height:normal;
+  text-align: justify;  
+}
+
+h1 {
+    font-size: var(--h1_font_size);
+    font-weight: var(--bold_font-weight);
+    text-align: center;
+}
+
+.exception {
+    text-align: left;
+}
+
+.contact_form {
+    text-align: center;
+}
+
+.about_main {
+  text-align: center;
+}
+
+
+
+p.intro {
+    text-align: justify;
+    margin: 20px;
+    text-indent: 20px;
+    line-height: 1.8em;
+}
+
+p {
+    line-height: 1.6em;
+}
+
+p.ex {
+    line-height: 0;
+}
+   
+h2 {
+    font-size: large;
+    font-weight: 500;
+    font-style: normal;
+}
+  
+h3 {
+  font-size: small;
+  font-weight: var(--bold_font-weight);
+  font-variant: small-caps;
+}
+a {
+  color: var(--a_color) ;
+}
+
+a:visited {
+  color: var(--crimson);
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+}
+
+a:active {
+  color: var(--a_active);
+}
+
+.navigation-list__item--active {
+  text-decoration: none;
+}
+
+.profile__portrait {
+  float: left;
+  width: 250px;
+  height: auto;
+  margin-right: 40px;
+  border-radius: 50%;
+}
+
+.page-footer {
+  clear: both;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.clear {
+  clear: both;
+  text-align: center;
+}
+
+.profile {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+nav {
+  position: relative;
+}
+  
+.page-header__item {
+  width: 200px;
+  height: 125px;
+  border-radius: 5%;
+}
+  
+* {
+  box-sizing: border-box;
+}
+
+.page-header {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+}
+
+.page-header__item {
+  flex: 0 1 200px;
+}
+
+.page-header__item:last-child {
+  flex-grow: 1;
+  text-align: right;
+}
+
+.navigation-list {
+  list-style: none;
+}
+
+.navigation-list li {
+  display: inline-block;
+  margin-left: 15px;
+}
+  
+.grid__item {
+  display: inline-block;
+  width: 33%;
+}
+  
+@supports (display: grid) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    margin: 0;
+  }
+}
+
+.grid__item {
+  background-color: lightgray;
+  width: auto;
+  min-height: auto;
+  margin: 0;
+}
+
+table {
+  margin-left: 30em;  
+}
+
+.contact {
+  text-align: center;
+}
+
+.form {
+  text-align: center;
+}
+
+.button, button {
+  border: none;
+  display: inline-block;
+  font-family: inherit;
+  background-color: var(--button_bckg-color) ;
+  color: white;
+  text-decoration:none;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid var(--border-bottom-color);
+  transition-duration: 0.9s;
+  transition-property: opacity;
+  margin-left: 3em;
+}
+
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
+  cursor: grab;
+  opacity: 0.8;
+}
+
+@media all and (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media all and (min-width: 500px) and (max-width: 750px){
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media all and (max-width: 750px) {
+  .grid {
+    grid-gap: 10px;
+}
+
+.grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+}
+
+h1 {
+    font-size: var(--h1_font_size);
+  }
+}
+
+@keyframes colour-change {
+  from {
+    fill: var(--color-change-from) ;
+  }
+  to {
+    fill: var(--color-change-to);
+  }
+}
+
+.circle {
+  animation: colour-change 2s linear infinite alternate;
+}
+
+@keyframes cloud-move {
+  from {
+    transform: translate(-200px, 50px);
+  }
+  to {
+    transform: translate(200px, 50px);
+  }
+}
+
+.cloud {
+  animation: cloud-move 15s linear infinite alternate;
+}
+
+@keyframes balloon_move {
+  from {
+    transform: translate(-80px, 50px);
+  }
+  to {
+    transform: translate(200px, 50px);
+  }
+}
+
+.balloon {
+  animation: balloon_move 15s linear infinite alternate;
+}
+
+@keyframes baloon_move {
+  from {
+    transform: translate(-75px, 50px);
+  }
+  to {
+    transform: translate(45px, 50px);
+  }
+}
+
+.baloon_2 {
+  animation: baloon_move 15s linear infinite alternate;
+}
+
+@keyframes bus_move {
+  from {
+    transform: translate(50px, 0);
+  }
+  to {
+    transform: translate(-750px, 0);
+  }
+}
+
+.bus {
+  animation: bus_move 7s linear infinite 0s;
+}
+ 
+
