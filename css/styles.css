@@ -148,7 +148,15 @@ nav {
   display: inline-block;
   margin-left: 15px;
 }
-  
+
+.navigation-list-2 {
+  list-style: none;
+}
+
+.navigation-list-2 li {
+  margin-left: 15px;
+}
+
 .grid__item {
   display: inline-block;
   width: 33%;
